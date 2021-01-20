@@ -1,0 +1,26 @@
+---
+title: "DataProductsAssignment"
+author: "Kara Schimmelfing"
+date: "1/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+The goal of this assignment is to create a webpage with R Markdown that features a map created with leaflet. The specific map could be any place. It must be hosted on GitHub Pages, RPubs, or NeoCities. 
+
+```{r load}
+library(leaflet)
+```
+
+
+```{r map, echo=FALSE}
+m_map <- leaflet() %>% addTiles()   
+m_map <- m_map %>% addMarkers(lat= 42.2936, lng= -71.3059, popup="A great education")
+m_map 
+```
+
